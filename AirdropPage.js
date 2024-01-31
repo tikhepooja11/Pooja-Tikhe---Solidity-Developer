@@ -1,5 +1,3 @@
-// AirdropPage.js
-
 import React, { useState, useEffect } from 'react';
 import { useWeb3React } from '@web3-react/core';
 import { ethers } from 'ethers';
@@ -15,11 +13,11 @@ const AirdropPage = () => {
     }
 
     try {
-      const contractAddress = 'YOUR_CONTRACT_ADDRESS'; // Replace with your deployed contract address
-      const contractAbi = ['YOUR_CONTRACT_ABI']; // Replace with your contract ABI
+      const contractAddress = 'DUMMY_CONTRACT_ADDRESS'; 
+      const contractAbi = ['DUMMY_CONTRACT_ABI']; 
       const contract = new ethers.Contract(contractAddress, contractAbi, library.getSigner());
 
-      const recipients = ['0xRecipientAddress1', '0xRecipientAddress2']; // Replace with actual recipient addresses
+      const recipients = ['0xRecipientAddress1', '0xRecipientAddress2']; 
 
       const tx = await contract.airdropTokens(recipients);
       await tx.wait();
